@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+             x:Class="GameListDBUtils_Desktop.Views.GenericForm">
+  <StackPanel>
+        <WrapPanel>    
+            <Label VerticalAlignment="Center" Content="Name:" />    
+            <TextBox x:Name="TextBoxName"        
+                 Height="20"        
+                 Width="150" />
+            <Button Content="Gather from IGDB"/>
+        </WrapPanel>
+        <WrapPanel>
+            <Label Content="Type" VerticalAlignment="Center" />
+        <ComboBox>
+            <ComboBoxItem Content="Game" />
+            <ComboBoxItem Content="DLC" />
+            <ComboBoxItem Content="GaaS" />
+        </ComboBox> 
+        </WrapPanel> 
+        <WrapPanel Orientation="Horizontal">
+            <Label Content="Plataform" VerticalAlignment="Center" />
+        <ComboBox>
+        </ComboBox> 
+        </WrapPanel>     
+        <WrapPanel>    
+            <Label 
+            VerticalAlignment="Center" 
+            Content="Year:" />    
+            <TextBox x:Name="TextBoxYear"        
+                 Height="20"        
+                 Width="150" />    
+        </WrapPanel>
+        <WrapPanel>
+            <Label VerticalAlignment="Center" Content="NSFW" />
+            <CheckBox />
+        </WrapPanel>
+        <WrapPanel>
+            <Label VerticalAlignment="Center" Content="Beaten: " />
+            <CheckBox />
+        </WrapPanel>
+        <WrapPanel>
+            <Label VerticalAlignment="Center" Content="Compleated: " />
+            <CheckBox />
+        </WrapPanel>
+  </StackPanel>
+</UserControl>
