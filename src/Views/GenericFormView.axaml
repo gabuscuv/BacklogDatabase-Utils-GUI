@@ -3,7 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
-             x:Class="GameListDBUtils_Desktop.Views.GenericForm">
+             xmlns:src="using:GameListDBUtils_Desktop.Model"
+             x:Class="GameListDBUtils_Desktop.Views.GenericFormView">
   <StackPanel>
         <WrapPanel>    
             <Label VerticalAlignment="Center" Content="Name:" />    
@@ -22,16 +23,20 @@
         </WrapPanel> 
         <WrapPanel Orientation="Horizontal">
             <Label Content="Plataform" VerticalAlignment="Center" />
-        <ComboBox>
-        </ComboBox> 
+            <ComboBox 
+                x:Name="CB_Plataform" 
+            />
         </WrapPanel>     
         <WrapPanel>    
             <Label 
-            VerticalAlignment="Center" 
-            Content="Year:" />    
-            <TextBox x:Name="TextBoxYear"        
-                 Height="20"        
-                 Width="150" />    
+                VerticalAlignment="Center" 
+                Content="Year:" 
+            />    
+            <TextBox 
+                x:Name="TextBoxYear"
+                Height="20"        
+                Width="150" 
+            />    
         </WrapPanel>
         <WrapPanel>
             <Label VerticalAlignment="Center" Content="NSFW" />
@@ -42,8 +47,29 @@
             <CheckBox />
         </WrapPanel>
         <WrapPanel>
-            <Label VerticalAlignment="Center" Content="Compleated: " />
+            <Label VerticalAlignment="Center" Content="Completed: " />
             <CheckBox />
+        </WrapPanel>
+        <WrapPanel Orientation="Horizontal">
+            <Label Content="Status:" VerticalAlignment="Center" />
+            <ComboBox x:Name="CB_Status">
+                <ComboBoxItem>Not Started</ComboBoxItem>
+                <ComboBoxItem>In Progress</ComboBoxItem>
+                <ComboBoxItem>Beaten</ComboBoxItem>
+                <ComboBoxItem>Completed</ComboBoxItem>
+                <ComboBoxItem>Dropped</ComboBoxItem>
+            </ComboBox>
+        </WrapPanel>
+        <WrapPanel>
+            <Label VerticalAlignment="Center" Content="Infinite Game: " />
+            <CheckBox />
+        </WrapPanel>
+        <WrapPanel>    
+            <Label VerticalAlignment="Center" Content="Completed Year:" />    
+            <Calendar x:Name="C_CompleatedYear"
+                 Height="40"        
+                 
+                 />
         </WrapPanel>
   </StackPanel>
 </UserControl>
